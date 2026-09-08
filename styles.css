@@ -5,3 +5,7 @@
 /* Keep the red accent consistent in translucent decorative states. */
 .pulse{box-shadow:0 0 0 5px #ff5a5f22}.orbit-ring-one{border-color:#ff5a5f66}.skill-tags span,.project-status{border-color:#ff5a5f66}.visual-shape{border-color:#ff5a5f}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.skill-card,.site-nav a,.text-link{transition:none}.skill-card:hover{transform:none}.orbit-ring{transform:none}.ticker-track{animation:none}}
+
+.repository-link{white-space:nowrap}
+
+.hero-actions{flex-wrap:wrap}
