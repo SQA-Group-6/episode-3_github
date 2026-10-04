@@ -38,3 +38,28 @@
 .repository-link{white-space:nowrap}
 
 .hero-actions{flex-wrap:wrap}
+
+/* Bootstrap provides the responsive structure; these overrides preserve the portfolio identity. */
+section[id]{scroll-margin-top:100px}
+.site-header{height:auto;width:min(1180px,calc(100% - 80px));background:var(--bg)}
+.portfolio-navbar{min-height:85px;background:rgba(16,17,17,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.portfolio-navbar .navbar-toggler{border-color:var(--line);padding:8px}
+.portfolio-navbar .navbar-toggler:focus{box-shadow:0 0 0 3px #ff5a5f44}
+.portfolio-navbar .navbar-toggler-icon{filter:invert(1);opacity:.75}
+.portfolio-navbar .nav-link{color:var(--muted);font-size:12px}
+.portfolio-navbar .nav-link:hover,.portfolio-navbar .nav-link:focus-visible{color:var(--acid)}
+.portfolio-navbar .nav-cta{color:var(--bg)!important;background:var(--acid);padding:11px 16px;border-radius:2px}
+.portfolio-navbar .nav-cta span{margin-left:20px}
+.project-card{box-shadow:0 .5rem 1.25rem rgba(0,0,0,.16);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;border:1px solid transparent}
+.project-card:hover,.project-card:focus-within{transform:translateY(-8px);box-shadow:0 1.25rem 2.5rem rgba(0,0,0,.42);border-color:var(--acid)}
+.project-card:hover .project-visual,.project-card:focus-within .project-visual{filter:saturate(1.12)}
+.project-visual{transition:filter .22s ease}
+.site-footer{width:min(1180px,calc(100% - 80px))}
+@media(max-width:760px){
+  .site-header,.site-footer{width:calc(100% - 40px)}
+  .portfolio-navbar{min-height:71px}
+}
+@media(prefers-reduced-motion:reduce){
+  .project-card,.project-visual{transition:none}
+  .project-card:hover,.project-card:focus-within{transform:none}
+}
